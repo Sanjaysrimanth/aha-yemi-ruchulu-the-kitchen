@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aha Yemi Ruchulu</title>
+        <link rel="icon" type="image/png" href="assets/Aha-Logo.png">
+        <meta name="description" content="franchise opening accross india.so join us this journey">
+        
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/story.css">
+      <link rel="stylesheet" href="css/testimonials.css">
+      <link rel="stylesheet" href="css/reserve.css">
+      <link rel="stylesheet" href="css/catering.css">
+      <link rel="stylesheet" href="css/branches.css">
+      <link rel="stylesheet" href="css/franchise.css">  
+      </head>
+<body class="franchise-page">
+
+<!-- ═══ GRAIN OVERLAY ═══ -->
+<div class="grain-overlay" aria-hidden="true"></div>
+
+<!-- ═══ CURSOR GLOW ═══ -->
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+<!-- ═══ NAVBAR ═══ -->
+<!-- <nav id="navbar" class="franchise-nav">
+  <a href="index.html" class="nav-logo">
+    <span><img src="assets/Aha-Logo.png" style="width: 80px; height: 90px;"></span>
+    <div class="nav-logo-text"><h2>Aha Yemi Ruchulu</h2><span>The Kitchen</span></div>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="story.html">Our Story</a>
+    <a href="branches.html">Branches</a>
+    <a href="franchise.html" class="active">Franchise</a>
+    <a href="catering.html">Catering</a>
+  </div>
+
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav> -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon">
+      <span><img src="assets/Aha-Logo.png" style="width: 80px; height: 90px;"></span>
+    </div>
+    <div class="nav-logo-text"><h2>Aha Yemi Ruchulu</h2><span> The Kitchen</span></div>
+  </a>
+  <div class="nav-links">
+    <a href="index.html" data-page="home">Home</a>
+    <a href="story.html">Our Story</a>
+    <a href="menu.html">Menu</a>
+    <a href="catering.html">Catering</a>
+    <a href="testimonials.html">testimonials</a>
+    <a href="franchise.html">franchise</a>
+    <a href="branches.html">Branches</a>
+  </div>
+  <a href="reserve.html" class="btn-fill nav-cta desktop">Reserve Table</a>
+  <button class="hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+
+<div id="mobile-menu" class="mobile-menu">
+  <button class="mobile-close" id="mobile-close">✕</button>
+  <a href="index.html">Home</a>
+  <a href="menu.html">Menu</a>
+  <a href="story.html">Our Story</a>
+  <a href="branches.html">Branches</a>
+  <a href="catering.html">Catering</a>
+  <a href="testimonials.html">Testimonials</a>
+  <a href="franchise.html">Franchise</a>
+  <a href="reserve.html">Reserve</a>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SECTION 1 — HERO
+══════════════════════════════════════════ -->
+<section class="f-hero" id="home">
+  <canvas id="particleCanvas"></canvas>
+  <div class="hero-ambient-1"></div>
+  <div class="hero-ambient-2"></div>
+  <div class="hero-ambient-3"></div>
+
+  <div class="f-hero-content">
+    <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><a heref="franchise.html"><span>Franchise</span></a></div>
+    <div class="hero-eyebrow">
+      <span class="eyebrow-line"></span>
+    </div>
+    <h1 class="f-hero-title">
+      <span class="title-line" data-delay="0">Bring an Unforgettable</span>
+      <span class="title-line title-italic" data-delay="150">Dining Experience</span>
+      <span class="title-line" data-delay="300">to Your City</span>
+    </h1>
+    <p class="f-hero-sub">From authentic Telugu flavours to Chinese, pizzas, burgers, biryani, and Indian classics — we bring a diverse dining experience under one trusted brand.</p>
+    <div class="f-hero-actions">
+      <a href="#enquiry" class="btn-f-primary">
+        <span>Partner With Us</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#brand" class="btn-f-outline">
+        <span>Explore The Brand</span>
+      </a>
+    </div>
+    <div class="hero-badges">
+      <div class="hero-badge"><span class="badge-num">4+</span><span class="badge-lbl">Years Heritage</span></div>
+      <div class="hero-badge-divider"></div>
+      <div class="hero-badge"><span class="badge-num">5L+</span><span class="badge-lbl">Happy Guests</span></div>
+      <div class="hero-badge-divider"></div>
+      <div class="hero-badge"><span class="badge-num">3</span><span class="badge-lbl">Locations</span></div>
+    </div>
+  </div>
+
+  <div class="hero-scroll-indicator">
+    <div class="scroll-label">Scroll</div>
+    <div class="scroll-track"><div class="scroll-thumb"></div></div>
+  </div>
+
+  <div class="hero-img-side">
+    <div class="hero-img-frame">
+      <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80" alt="Premium restaurant interior" loading="lazy">
+      <div class="hero-img-overlay"></div>
+    </div>
+    <div class="hero-img-tag">
+      <span>●</span> Open for Partnerships
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 2 — BRAND STORY
+══════════════════════════════════════════ -->
+<section class="f-brand" id="brand">
+  <div class="f-brand-left reveal-left">
+    <div class="brand-img-wrap">
+      <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=900&q=80" alt="Brand experience" loading="lazy">
+      <div class="brand-img-glow"></div>
+    </div>
+    <div class="brand-float-stat">
+      <div class="float-stat-num" data-count="4" data-suffix="+">4+</div>
+      <div class="float-stat-lbl">Years of Culinary Heritage</div>
+    </div>
+  </div>
+  <div class="f-brand-right reveal-right">
+    <div class="f-sec-label">The Brand Story</div>
+    <h2 class="f-sec-title">More Than a Restaurant.<br><em>A Legacy of Flavour and Experience.</em></h2>
+    <p class="f-body-text">Aha Yemi Ruchulu was founded in Visakhapatnam with a simple idea — to make great food an experience that everyone can enjoy, regardless of taste or preference.</p>
+    <p class="f-body-text">What began with a passion for quality cooking has grown into a multi-cuisine brand offering a wide range of flavours — from Indian favourites and Chinese dishes to pizzas, burgers, biryani, and more. Built on consistency, taste, and customer experience, Aha Yemi Ruchulu continues to grow as a trusted name in everyday dining.</p>
+    <div class="brand-counters">
+      <div class="brand-counter">
+        <div class="counter-num" data-count="500000" data-suffix="+">500000+</div>
+        <div class="counter-lbl">Guests Served</div>
+      </div>
+      <div class="brand-counter">
+        <div class="counter-num" data-count="700" data-suffix="+">700+</div>
+        <div class="counter-lbl">Heritage Recipes</div>
+      </div>
+      <div class="brand-counter">
+        <div class="counter-num" data-count="3" data-suffix="+">3+</div>
+        <div class="counter-lbl">Locations & Growing</div>
+      </div>
+    </div>
+    <a href="#why" class="btn-f-text">Why franchise with us <span>→</span></a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 3 — WHY PARTNER
+══════════════════════════════════════════ -->
+<section class="f-why" id="why">
+  <div class="f-section-header reveal-up">
+    <div class="f-sec-label center">Why Partner With Us</div>
+    <h2 class="f-sec-title center">The Competitive<br><em>Advantage</em></h2>
+    <p class="f-sec-sub">Six reasons why franchise partners choose Aha Yemi Ruchulu over every other opportunity.</p>
+  </div>
+  <div class="f-why-grid">
+    <div class="why-card reveal-up" data-delay="0">
+      <div class="why-card-glow"></div>
+      <div class="why-icon">🏛</div>
+      <h3 class="why-title">Strong Brand Identity</h3>
+      <p class="why-desc">A recognisable, trusted brand with 4+ years of heritage and a loyal customer base across Andhra Pradesh.</p>
+      <div class="why-arrow">→</div>
+    </div>
+    <div class="why-card reveal-up" data-delay="100">
+      <div class="why-card-glow"></div>
+      <div class="why-icon">⭐</div>
+      <h3 class="why-title">Premium Customer Experience</h3>
+      <p class="why-desc">Award-winning dining ambience, service standards, and plating presentation that drives repeat visits.</p>
+      <div class="why-arrow">→</div>
+    </div>
+    <div class="why-card reveal-up" data-delay="200">
+      <div class="why-card-glow"></div>
+      <div class="why-icon">⚙</div>
+      <h3 class="why-title">Operational Excellence</h3>
+      <p class="why-desc">Proven SOPs, quality control frameworks, and kitchen systems handed to you from day one.</p>
+      <div class="why-arrow">→</div>
+    </div>
+    <div class="why-card reveal-up" data-delay="0">
+      <div class="why-card-glow"></div>
+      <div class="why-icon">📡</div>
+      <h3 class="why-title">Marketing Support</h3>
+      <p class="why-desc">Full digital marketing strategy, social media playbook, launch campaign and ongoing brand support.</p>
+      <div class="why-arrow">→</div>
+    </div>
+    <div class="why-card reveal-up" data-delay="100">
+      <div class="why-card-glow"></div>
+      <div class="why-icon">📈</div>
+      <h3 class="why-title">Scalable Business Opportunity</h3>
+      <p class="why-desc">A low-risk, high-return model tested across multiple markets. Built for sustainable, long-term growth.</p>
+      <div class="why-arrow">→</div>
+    </div>
+    <div class="why-card reveal-up" data-delay="200">
+      <div class="why-card-glow"></div>
+      <div class="why-icon">🤝</div>
+      <h3 class="why-title">End-to-End Assistance</h3>
+      <p class="why-desc">Dedicated support from application to grand launch and beyond. You are never alone in this journey.</p>
+      <div class="why-arrow">→</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 4 — FRANCHISE EXPERIENCE
+══════════════════════════════════════════ -->
+<section class="f-experience" id="experience">
+  <div class="f-section-header reveal-up">
+    <div class="f-sec-label center">The Experience</div>
+    <h2 class="f-sec-title center">What You're<br><em>Actually Building</em></h2>
+  </div>
+
+  <div class="exp-item reveal-left">
+    <div class="exp-img-wrap">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80" alt="Premium interior" loading="lazy">
+      <div class="exp-img-tag">01</div>
+    </div>
+    <div class="exp-content">
+      <h3 class="exp-title">An Interior That<br>Makes People <em>Stay</em></h3>
+      <p class="exp-desc">Every Aha Yemi Ruchulu location is designed to be a destination — not just a dining room. Warm lighting, rich textures, and thoughtful spatial design create an atmosphere guests photograph, share, and return to.</p>
+    </div>
+  </div>
+
+  <div class="exp-item exp-item-reverse reveal-right">
+    <div class="exp-img-wrap">
+      <img src="https://images.unsplash.com/photo-1567337710282-00832b415979?w=900&q=80" alt="Social moments" loading="lazy">
+      <div class="exp-img-tag">02</div>
+    </div>
+    <div class="exp-content">
+      <h3 class="exp-title">Moments Worth<br><em>Sharing</em></h3>
+      <p class="exp-desc">In the age of social media, your restaurant is your best marketing channel. Our dishes are crafted to be as beautiful as they are delicious — generating organic reach and brand visibility with every plate served.</p>
+      <div class="exp-detail">
+        <span>Signature plating standards</span>
+        <span>Viral food experiences</span>
+        <span>Social-first presentation</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="exp-item reveal-left">
+    <div class="exp-img-wrap">
+      <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=900&q=80" alt="High energy dining" loading="lazy">
+      <div class="exp-img-tag">03</div>
+    </div>
+    <div class="exp-content">
+      <h3 class="exp-title">The Energy of a<br><em>Great Dining Night</em></h3>
+      <p class="exp-desc">There is an energy in a full house on a Friday evening that no other business can replicate. Our model is built to create that energy consistently — through events, live cooking stations, and a menu that gives people reasons to celebrate.</p>
+      <div class="exp-detail">
+        <span>Live cooking station setup</span>
+        <span>Events & festival programming</span>
+        <span>High-footfall strategies</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 5 — SUPPORT SYSTEM
+══════════════════════════════════════════ -->
+<section class="f-support" id="support">
+  <div class="f-section-header reveal-up">
+    <div class="f-sec-label center">Partner Support</div>
+    <h2 class="f-sec-title center">Everything You Need.<br><em>From Us to You.</em></h2>
+    <p class="f-sec-sub">Click arrows or drag to explore the full support ecosystem.</p>
+  </div>
+
+  <div class="support-slider-wrapper">
+    
+    <button class="support-nav-btn prev-btn" id="supportPrevBtn" aria-label="Scroll Left">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+    </button>
+
+    <div class="support-scroll-track" id="supportTrack">
+      <div class="support-scroll-inner" id="supportInner">
+
+        <div class="support-card">
+          <div class="support-card-num">01</div>
+          <div class="support-icon">🎓</div>
+          <h3 class="support-title">Staff Training &amp; Certification</h3>
+          <p class="support-desc">Comprehensive on-site and remote training for your entire team — kitchen, service, and management. Certified by our head chefs.</p>
+        </div>
+
+        <div class="support-card">
+          <div class="support-card-num">02</div>
+          <div class="support-icon">📋</div>
+          <h3 class="support-title">Operational Guidance</h3>
+          <p class="support-desc">Full SOPs, supplier network access, quality control checklists, and daily operational playbooks that make excellence repeatable.</p>
+        </div>
+
+        <div class="support-card">
+          <div class="support-card-num">03</div>
+          <div class="support-icon">🎨</div>
+          <h3 class="support-title">Branding &amp; Identity Kit</h3>
+          <p class="support-desc">Complete brand assets — menus, signage, packaging, uniforms, and interior design guidelines aligned to the Aha Yemi standard.</p>
+        </div>
+
+        <div class="support-card">
+          <div class="support-card-num">04</div>
+          <div class="support-icon">📣</div>
+          <h3 class="support-title">Marketing &amp; Digital Support</h3>
+          <p class="support-desc">Social media strategy, local advertising playbook, Zomato/Swiggy setup, and launch campaign designed to fill your restaurant from week one.</p>
+        </div>
+
+        <div class="support-card">
+          <div class="support-card-num">05</div>
+          <div class="support-icon">🚀</div>
+          <h3 class="support-title">Grand Launch Support</h3>
+          <p class="support-desc">Our team is physically present at your launch. From setup to service, we ensure your opening creates the impression that sets the standard.</p>
+        </div>
+
+        <div class="support-card">
+          <div class="support-card-num">06</div>
+          <div class="support-icon">💻</div>
+          <h3 class="support-title">Technology &amp; POS Integration</h3>
+          <p class="support-desc">POS systems, reservation management, delivery platform integration, and analytics dashboards to help you manage and grow efficiently.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <button class="support-nav-btn next-btn" id="supportNextBtn" aria-label="Scroll Right">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+    </button>
+
+  </div>
+
+  <div class="support-progress-bar"><div class="support-progress-fill" id="supportProgress"></div></div>
+</section>
+<!-- ══════════════════════════════════════════
+     SECTION 6 — FRANCHISE JOURNEY TIMELINE
+══════════════════════════════════════════ -->
+<!-- ══════════════════════════════════════════
+     SECTION 6 — FRANCHISE JOURNEY TIMELINE
+══════════════════════════════════════════ -->
+<section class="f-journey" id="journey">
+  <div class="f-section-header reveal-up">
+    <div class="f-sec-label center">The Journey</div>
+    <h2 class="f-sec-title center">Your Path to<br><em>Grand Launch</em></h2>
+  </div>
+
+  <div class="journey-timeline">
+    <div class="timeline-spine">
+      <div class="timeline-spine-fill" id="timelineSpine"></div>
+    </div>
+
+    <!-- STEP 1 — LEFT -->
+    <div class="tl-step reveal-tl" data-delay="0">
+      <div class="tl-body">
+        <div class="tl-step-tag">Step One</div>
+        <h3 class="tl-title">Apply</h3>
+        <p class="tl-desc">Submit your franchise interest form. Tell us about yourself, your city, and your vision. We review every application personally.</p>
+      </div>
+      <div class="tl-node"><span>01</span></div>
+      <div></div>
+    </div>
+
+    <!-- STEP 2 — RIGHT -->
+    <div class="tl-step tl-step-right reveal-tl" data-delay="100">
+      <div class="tl-body">
+        <div class="tl-step-tag">Step Two</div>
+        <h3 class="tl-title">Initial Discussion</h3>
+        <p class="tl-desc">A discovery call with our franchise team to understand your goals, evaluate your market, and walk you through the opportunity in detail.</p>
+      </div>
+      <div class="tl-node"><span>02</span></div>
+      <div></div>
+    </div>
+
+    <!-- STEP 3 — LEFT -->
+    <div class="tl-step reveal-tl" data-delay="200">
+      <div class="tl-body">
+        <div class="tl-step-tag">Step Three</div>
+        <h3 class="tl-title">Planning</h3>
+        <p class="tl-desc">Location scouting, layout planning, interior concept approval, and operational planning. Everything mapped out before a single wall is painted.</p>
+      </div>
+      <div class="tl-node"><span>03</span></div>
+      <div></div>
+    </div>
+
+    <!-- STEP 4 — RIGHT -->
+    <div class="tl-step tl-step-right reveal-tl" data-delay="100">
+      <div class="tl-body">
+        <div class="tl-step-tag">Step Four</div>
+        <h3 class="tl-title">Approval</h3>
+        <p class="tl-desc">Final agreement, franchise documentation, and legal setup. Complete transparency at every stage — no surprises.</p>
+      </div>
+      <div class="tl-node"><span>04</span></div>
+      <div></div>
+    </div>
+
+    <!-- STEP 5 — LEFT -->
+    <div class="tl-step reveal-tl" data-delay="0">
+      <div class="tl-body">
+        <div class="tl-step-tag">Step Five</div>
+        <h3 class="tl-title">Setup</h3>
+        <p class="tl-desc">Full fit-out support, kitchen equipment sourcing, team hiring, and 360° training. We hand you the keys to a fully operational restaurant.</p>
+      </div>
+      <div class="tl-node"><span>05</span></div>
+      <div></div>
+    </div>
+
+    <!-- STEP 6 — RIGHT -->
+    <div class="tl-step tl-step-right reveal-tl" data-delay="100">
+      <div class="tl-body">
+        <div class="tl-step-tag">Step Six</div>
+        <h3 class="tl-title">Grand Launch 🚀</h3>
+        <p class="tl-desc">Open your doors to your city. Our team is with you for the launch event, press coverage, and the first critical weeks of operations.</p>
+      </div>
+      <div class="tl-node tl-node-final"><span>06</span></div>
+      <div></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 7 — TESTIMONIALS
+══════════════════════════════════════════ -->
+<!-- <section class="f-testimonials" id="testimonials">
+  <div class="f-section-header reveal-up">
+    <div class="f-sec-label center">Partner Stories</div>
+    <h2 class="f-sec-title center">Voices of Our<br><em>Franchise Family</em></h2>
+  </div>
+  <div class="testimonial-carousel-wrap">
+    <div class="testimonial-track" id="testimonialTrack">
+
+      <div class="testimonial-slide">
+        <div class="t-card">
+          <div class="t-quote-mark">"</div>
+          <p class="t-text">The support from day one was unlike anything I expected. Our location became profitable within 8 months. The brand name alone fills tables every weekend.</p>
+          <div class="t-stars">★★★★★</div>
+          <div class="t-author">
+            <div class="t-name">Ravi Kumar</div>
+            <div class="t-role">Franchise Partner · Hyderabad</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-slide">
+        <div class="t-card">
+          <div class="t-quote-mark">"</div>
+          <p class="t-text">The brand does the heavy lifting. Customers walk in because they already trust the name. We just had to maintain the standard — and they trained us brilliantly for that.</p>
+          <div class="t-stars">★★★★★</div>
+          <div class="t-author">
+            <div class="t-name">Priya Sharma</div>
+            <div class="t-role">Franchise Partner · Vijayawada</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-slide">
+        <div class="t-card">
+          <div class="t-quote-mark">"</div>
+          <p class="t-text">Best business decision I've made. The systems are foolproof, the team is always available, and the food quality is so consistent it feels like magic every service.</p>
+          <div class="t-stars">★★★★★</div>
+          <div class="t-author">
+            <div class="t-name">Arun Reddy</div>
+            <div class="t-role">Franchise Partner · Warangal</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-slide">
+        <div class="t-card">
+          <div class="t-quote-mark">"</div>
+          <p class="t-text">From launch to daily operations, the level of support from the Aha Yemi team is unmatched. It feels less like a franchisor relationship and more like a genuine partnership.</p>
+          <div class="t-stars">★★★★★</div>
+          <div class="t-author">
+            <div class="t-name">Deepika Nair</div>
+            <div class="t-role">Franchise Partner · Tirupati</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="testimonial-controls">
+      <button class="t-btn t-prev" id="tPrev" aria-label="Previous">←</button>
+      <div class="t-dots" id="tDots"></div>
+      <button class="t-btn t-next" id="tNext" aria-label="Next">→</button>
+    </div>
+  </div>
+</section> -->
+
+<!-- ══════════════════════════════════════════
+     SECTION 8 — FAQ
+══════════════════════════════════════════ -->
+<section class="f-faq" id="faq">
+  <div class="faq-inner">
+    <div class="faq-left reveal-left">
+      <div class="f-sec-label">Common Questions</div>
+      <h2 class="f-sec-title">Everything<br>You Need to <em>Know</em></h2>
+      <p class="f-body-text" style="margin-top:20px;">Can't find your answer? Reach out directly — our franchise team responds within 4 hours.</p>
+      <a href="#enquiry" class="btn-f-text" style="margin-top:28px;display:inline-block;">Ask us directly <span>→</span></a>
+    </div>
+    <div class="faq-right reveal-right">
+
+      <div class="faq-item">
+        <button class="faq-q">
+          How do I become a franchise partner?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">
+          Simply fill in the enquiry form on this page. Our franchise team will contact you within 24 hours to begin the discovery process. There are no upfront fees just to have a conversation.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Do you provide full operational support?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">
+          Yes. From kitchen setup to staff training, menu execution, technology, and marketing — you receive comprehensive support across every function. Our operations team is available to you 7 days a week.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          How long does onboarding take?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">
+          The typical timeline from approval to grand launch is 90–120 days, depending on location readiness and fit-out complexity. We work with you to optimise every step.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          What locations are preferred?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">
+          We are actively seeking partners in Tier 1 and Tier 2 cities across Andhra Pradesh, Telangana, Tamil Nadu, and Karnataka. High-footfall areas, food courts, standalone restaurants, and mixed-use developments are all considered.
+        </div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Is prior F&amp;B experience required?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">
+          Not at all. Our systems and training programme are designed to enable partners without prior restaurant experience. What matters most is commitment, passion for hospitality, and the right location.
+        </div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 9 — FRANCHISE ENQUIRY FORM
+══════════════════════════════════════════ -->
+<section class="f-enquiry" id="enquiry">
+  <canvas class="enquiry-canvas" id="enquiryCanvas"></canvas>
+  <div class="enquiry-ambient-1"></div>
+  <div class="enquiry-ambient-2"></div>
+
+  <div class="enquiry-inner">
+    <div class="enquiry-heading reveal-up">
+      <div class="f-sec-label center">Let's Connect</div>
+      <h2 class="enquiry-title">Let's Build Something<br><em>Extraordinary Together</em></h2>
+      <p class="enquiry-sub">Share your details and our franchise team will reach out within 24 hours.</p>
+    </div>
+
+    <form class="enquiry-form" id="enquiryForm" novalidate>
+      <div class="form-glow-follow" id="formGlowFollow"></div>
+
+      <div class="form-row">
+        <div class="float-field">
+          <input
+            type="text"
+            id="f-name"
+            class="f-input"
+            placeholder=" "
+            autocomplete="name"
+            required
+            minlength="3"
+            maxlength="60"
+            pattern="[A-Za-z\s.'-]{3,60}"
+            title="Please enter a valid full name"
+          >
+          <label class="f-label" for="f-name">Full Name</label>
+          <div class="f-line"></div>
+        </div>
+      
+        <div class="float-field">
+          <input
+            type="email"
+            id="f-email"
+            class="f-input"
+            placeholder=" "
+            autocomplete="email"
+            required
+            maxlength="100"
+          >
+          <label class="f-label" for="f-email">Email Address</label>
+          <div class="f-line"></div>
+        </div>
+      </div>
+      
+      <div class="form-row">
+        <div class="float-field">
+          <input
+            type="tel"
+            id="f-phone"
+            class="f-input"
+            placeholder=" "
+            autocomplete="tel"
+            required
+            pattern="^[0-9+\-\s()]{10,20}$"
+            minlength="10"
+            maxlength="20"
+            title="Enter a valid phone number"
+          >
+          <label class="f-label" for="f-phone">Phone Number</label>
+          <div class="f-line"></div>
+        </div>
+      
+        <div class="float-field">
+          <input
+            type="text"
+            id="f-city"
+            class="f-input"
+            placeholder=" "
+            required
+            minlength="2"
+            maxlength="80"
+            pattern="[A-Za-z0-9\s,.-]{2,80}"
+            title="Enter a valid city or location"
+          >
+          <label class="f-label" for="f-city">City / Location</label>
+          <div class="f-line"></div>
+        </div>
+      </div>
+      
+      <div class="float-field float-field-full">
+        <textarea
+          id="f-message"
+          class="f-input f-textarea"
+          placeholder=" "
+          rows="4"
+          maxlength="1000"
+        ></textarea>
+        <label class="f-label" for="f-message">
+          Your Message (optional)
+        </label>
+        <div class="f-line"></div>
+      </div>
+      <div class="form-submit-row">
+        <button type="submit" class="btn-f-submit" id="submitBtn">
+          <span class="submit-text">Begin Your Journey</span>
+          <span class="submit-icon">→</span>
+          <span class="submit-loading" style="display:none;">
+            <span class="loading-dot"></span><span class="loading-dot"></span><span class="loading-dot"></span>
+          </span>
+        </button>
+        <p class="form-note">We respond within 24 hours. Your data is secure and never shared.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 10 — FINAL CTA
+══════════════════════════════════════════ -->
+<section class="f-final-cta">
+  <div class="cta-bg-anim"></div>
+  <div class="cta-ambient"></div>
+  <div class="f-final-cta-content reveal-up">
+    <div class="f-sec-label center">Your Moment Awaits</div>
+    <h2 class="cta-headline">Create the Next Great<br><em>Dining Destination</em></h2>
+    <p class="cta-sub">The cities are waiting. The brand is ready. The only missing piece is you.</p>
+    <a href="#enquiry" class="btn-f-cta-large">
+      <span>Start Your Journey</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FOOTER — Matches existing pages
+══════════════════════════════════════════ -->
+<footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-logo"><div class="">
+          <span><img src="assets/Aha-Logo.png" style="width: 80px; height: 90px;"></span>
+        </div><h3>Aha Yemi Ruchulu</h3></div>
+        <p>Three locations across Visakhapatnam district, best multi cuisine experience.</p>
+        <div class="footer-socials">
+          <h3 style="position: relative; top:5px;">Follow Us On:</h3>
+          <a href="https://www.instagram.com/aha_yemi_ruchulu/" class="soc soc-ig" title="Instagram" target="_blank">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/share/1ChVwjzYAh/?mibextid=wwXIfr" class="soc soc-fb" title="Facebook" target="_blank">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Explore</h4><ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="story.html">Our Story</a></li>
+        <li><a href="catering.html">Catering</a></li>
+        <li><a href="franchise.html">franchise</a></li>
+        <li><a href="branches.html">Branches</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Branches</h4><ul>
+        <li><a href="https://maps.app.goo.gl/ovn1dA99WKLaHt5z6" target="_blank">MVP</a></li>
+        <li><a href="https://maps.app.goo.gl/y9RdgmKpkf8jzEqk9" target="_blank">Gajuwaka</a></li>
+        <li><a href="https://maps.app.goo.gl/Mw4kasLbXvY4PgF19" target="_blank">Anakapalli</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Order Online</h4><ul>
+        <li><a href="https://www.zomato.com/visakhapatnam/aha-yemi-ruchulu-mvp-colony-vizag" style="color:rgba(226,55,68,.75);" target="_blank">🍽 Zomato</a></li>
+        <li><a href="https://www.swiggy.com/city/vizag/aha-yemi-ruchulu-sector-10-mvp-colony-rest795823" style="color:rgba(252,128,25,.75);" target="_blank">⊙ Swiggy</a></li>
+        <li style="margin-top:10px;"><a href="reserve.html">Reserve a Table</a></li>
+        <li><a href="catering.html">Catering Enquiry</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2023 Aha Yemi Ruchulu. All rights reserved.</p></div>
+  </footer>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <style>
+  .soc-ig:hover{border-color:#E1306C!important;color:#E1306C!important;}
+  .soc-fb:hover{border-color:#1877F2!important;color:#1877F2!important;}
+  .soc-yt:hover{border-color:#FF0000!important;color:#FF0000!important;}
+  .soc-zomato{border-color:rgba(226,55,68,.28)!important;color:rgba(226,55,68,.7)!important;}
+  .soc-zomato:hover{border-color:#E23744!important;color:#E23744!important;}
+  .soc-swiggy{border-color:rgba(252,128,25,.28)!important;color:rgba(252,128,25,.7)!important;}
+  .soc-swiggy:hover{border-color:#FC8019!important;color:#FC8019!important;}
+  .footer-col a{color:rgba(247,245,242,.4);transition:color .3s;text-decoration:none;}
+  .footer-col a:hover{color:var(--gld);}
+  </style>
+
+
+<script>
+
+
+
+const name = document.getElementById('f-name').value.trim();
+const email = document.getElementById('f-email').value.trim();
+const phone = document.getElementById('f-phone').value.trim();
+const city = document.getElementById('f-city').value.trim();
+
+if (name.length < 3) {
+  alert('Please enter your full name');
+  return;
+}
+
+if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+  alert('Please enter a valid email');
+  return;
+}
+
+if (!/^[0-9+\-\s()]{10,20}$/.test(phone)) {
+  alert('Please enter a valid phone number');
+  return;
+}
+
+if (city.length < 2) {
+  alert('Please enter your city/location');
+  return;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const track = document.getElementById("supportTrack");
+    const prevBtn = document.getElementById("supportPrevBtn");
+    const nextBtn = document.getElementById("supportNextBtn");
+    const fill = document.getElementById("supportProgress");
+  
+    if (!track || !prevBtn || !nextBtn || !fill) return;
+  
+    // The distance to jump on each click (1 Card Width + 1 Gap space)
+    const scrollAmount = 344; 
+  
+    // Click Event Listeners
+    nextBtn.addEventListener("click", () => {
+      track.scrollBy({
+        left: scrollAmount,
+        behavior: "smooth"
+      });
+    });
+  
+    prevBtn.addEventListener("click", () => {
+      track.scrollBy({
+        left: -scrollAmount,
+        behavior: "smooth"
+      });
+    });
+  
+    // Dynamic Progress Bar updates
+    const updateProgress = () => {
+      const maxScroll = track.scrollWidth - track.clientWidth;
+      if (maxScroll <= 0) {
+        fill.style.width = "0%";
+        return;
+      }
+      const percentage = (track.scrollLeft / maxScroll) * 100;
+      fill.style.width = `${percentage}%`;
+    };
+  
+    track.addEventListener("scroll", updateProgress);
+    window.addEventListener("resize", updateProgress);
+    updateProgress();
+  });
+
+  (function () {
+    var ham = document.getElementById('hamburger');
+    var mob = document.getElementById('mobile-menu');
+    var cls = document.getElementById('mobile-close');
+
+    if (!ham || !mob) return;
+
+    // Remove any old listeners by cloning
+    var newHam = ham.cloneNode(true);
+    ham.parentNode.replaceChild(newHam, ham);
+
+    newHam.addEventListener('click', function () {
+      mob.classList.add('open');
+    });
+
+    if (cls) {
+      cls.addEventListener('click', function () {
+        mob.classList.remove('open');
+      });
+    }
+
+    // Close when any link inside is clicked
+    mob.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        mob.classList.remove('open');
+      });
+    });
+
+    // Close on outside click
+    document.addEventListener('click', function (e) {
+      if (mob.classList.contains('open') &&
+          !mob.contains(e.target) &&
+          !newHam.contains(e.target)) {
+        mob.classList.remove('open');
+      }
+    });
+  })();
+  </script>
+
+
+<button id="scroll-top-btn" aria-label="Scroll to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+
+  
+  <script src="js/main.js"></script>
+  <script src="js/site-api.js"></script>
+  <script src="js/franchise.js"></script>
+  </body>
+  </html>
+  
+  
+  
+  
+  

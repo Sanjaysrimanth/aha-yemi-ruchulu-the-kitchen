@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserve a Table — Aha Yemi Ruchulu</title>
+  <link rel="icon" type="image/png" href="assets/Aha-Logo.png">
+  <meta name="description" content="Reserve your table at Aha Yemi Ruchulu across our Vizag, Gajuwaka, and Anakapalli branches.In Simple 4-step booking.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/reserve.css">
+</head>
+<body>
+
+<!-- ═══ NAVBAR ═══ -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon">
+      <span><img src="assets/Aha-Logo.png" style="width: 80px; height: 90px;"></span>
+    </div>
+    <div class="nav-logo-text"><h2>Aha Yemi Ruchulu</h2><span>The Kitchen</span></div>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="story.html">Our Story</a>
+    <a href="menu.html">Menu</a>
+    <a href="catering.html">Catering</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="franchise.html">franchise</a>
+    <a href="branches.html">Branches</a>
+  </div>
+  <a href="reserve.html" class="btn-fill nav-cta desktop" style="pointer-events:none;opacity:.6;">Reserving…</a>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div id="mobile-menu" class="mobile-menu">
+  <button class="mobile-close" id="mobile-close">✕</button>
+  <a href="index.html">Home</a>
+  <a href="story.html">Our Story</a>
+  <a href="menu.html">Menu</a>
+  <a href="catering.html">Catering</a>
+  <a href="testimonials.html">Testimonials</a>
+  <a href="franchise.html">Franchise</a>
+  <a href="branches.html">Branches</a>
+  <a href="reserve.html">Reserve Table</a>
+</div>
+
+<!-- ═══ PAGE HERO ═══ -->
+<header class="page-hero" style="min-height:360px;">
+  <div class="page-hero-bg">
+    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1400&q=80" alt="Reserve a Table">
+  </div>
+  <div class="page-hero-content">
+    <div class="breadcrumb">
+      <a href="index.html"></a>
+      <span class="sep"></span>
+      <span></span>
+    </div>
+    <h1 class="page-title">Reserve Your <em>Table</em></h1>
+    <p class="page-subtitle">A seamless reservation process designed for a memorable dining experience.</p>
+  </div>
+</header>
+
+<!-- ═══ PROGRESS BAR (sticky) ═══ -->
+<div class="reservation-progress" id="reservation-anchor">
+  <div class="progress-inner">
+    <div class="prog-step active" data-step="1">
+      <div class="prog-step-circle">1</div>
+      <div class="prog-step-label">Branch</div>
+    </div>
+    <div class="prog-connector"><div class="prog-connector-fill"></div></div>
+    <div class="prog-step" data-step="2">
+      <div class="prog-step-circle">2</div>
+      <div class="prog-step-label">Date &amp; Time</div>
+    </div>
+    <div class="prog-connector"><div class="prog-connector-fill"></div></div>
+    <div class="prog-step" data-step="3">
+      <div class="prog-step-circle">3</div>
+      <div class="prog-step-label">Your Details</div>
+    </div>
+    <div class="prog-connector"><div class="prog-connector-fill"></div></div>
+    <div class="prog-step" data-step="4">
+      <div class="prog-step-circle">4</div>
+      <div class="prog-step-label">Confirm</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ RESERVATION WRAPPER ═══ -->
+<div class="reservation-wrapper">
+
+  <!-- ── MAIN FORM PANEL ── -->
+  <div class="reservation-main">
+
+    <!-- ═══════════ STEP 1: CHOOSE BRANCH ═══════════ -->
+    <div class="step-panel active" id="step-1">
+      <div class="sec-label left" style="margin-bottom:12px;"><span>Step 1 of 4</span></div>
+      <h2 class="step-heading">Choose Your <em>Branch</em></h2>
+      <p class="step-subheading">Choose between our MVP, Gajuwaka, and Anakapalli locations and reserve your table with ease.</p>
+
+      <div class="branch-selector-grid" id="branch-sel-grid">
+        <!-- Dynamically built by reserve.js -->
+      </div>
+
+      <div id="branch-error" class="field-error" style="margin-bottom:16px;font-size:13px;"></div>
+
+      <!-- BRANCH FEATURES COMPARISON -->
+      <div style="background:#0d0d0d;border:1px solid rgba(199,154,59,.1);padding:24px 28px;margin-top:8px;">
+        <div style="font-size:10px;letter-spacing:3px;color:var(--gld);text-transform:uppercase;margin-bottom:16px;">Branch Highlights</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(199,154,59,.08);">
+          <div style="background:#0d0d0d;padding:16px 14px;">
+            <div style="font-size:12px;font-weight:600;color:rgba(247,245,242,.7);margin-bottom:8px;">MVP</div>
+            <div style="font-size:11px;color:rgba(247,245,242,.35);line-height:1.7;">Private Dining · Banquet Hall · Valet · Live Cooking</div>
+          </div>
+          <div style="background:#0d0d0d;padding:16px 14px;">
+            <div style="font-size:12px;font-weight:600;color:rgba(247,245,242,.7);margin-bottom:8px;">Gajuwaka</div>
+            <div style="font-size:11px;color:rgba(247,245,242,.35);line-height:1.7;">Family Seating · Quick Service · Takeaway · A/C</div>
+          </div>
+          <div style="background:#0d0d0d;padding:16px 14px;">
+            <div style="font-size:12px;font-weight:600;color:rgba(247,245,242,.7);margin-bottom:8px;">Anakapalli</div>
+            <div style="font-size:11px;color:rgba(247,245,242,.35);line-height:1.7;"> Free Parking </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-nav" style="justify-content:flex-end;">
+        <button class="btn-next" data-step="1">Choose Date &amp; Time →</button>
+      </div>
+    </div>
+
+    <!-- ═══════════ STEP 2: DATE & TIME ═══════════ -->
+    <div class="step-panel" id="step-2">
+      <div class="sec-label left" style="margin-bottom:12px;"><span>Step 2 of 4</span></div>
+      <h2 class="step-heading">Pick Your <em>Date &amp; Time</em></h2>
+      <p class="step-subheading">Choose any upcoming date and an available time slot. We recommend booking 24 hours in advance for weekend dinners.</p>
+
+      <!-- CALENDAR -->
+      <div class="calendar-wrapper">
+        <div style="font-size:10px;letter-spacing:3px;color:var(--gld);text-transform:uppercase;margin-bottom:14px;">Select Date</div>
+        <div class="calendar-nav">
+          <button class="cal-nav-btn" id="cal-prev" aria-label="Previous month">←</button>
+          <div class="cal-month-label" id="cal-month-label">—</div>
+          <button class="cal-nav-btn" id="cal-next" aria-label="Next month">→</button>
+        </div>
+        <div class="calendar-grid" id="cal-grid">
+          <!-- Built by JS -->
+        </div>
+        <div id="date-error" class="field-error" style="margin-top:10px;"></div>
+      </div>
+
+      <!-- TIME SLOTS -->
+      <div id="time-slots-section">
+        <div style="font-size:10px;letter-spacing:3px;color:var(--gld);text-transform:uppercase;margin-bottom:6px;">Select Time</div>
+        <p style="font-size:12px;color:rgba(247,245,242,.32);margin-bottom:16px;">
+          <span style="display:inline-block;width:10px;height:10px;border:1px solid rgba(199,154,59,.3);vertical-align:middle;margin-right:4px;"></span> Available &nbsp;
+          <span style="display:inline-block;width:10px;height:10px;border:1px solid rgba(247,245,242,.08);vertical-align:middle;margin-right:4px;opacity:.4;"></span> <s style="opacity:.4;">Unavailable</s>
+        </p>
+
+        <div style="font-size:10px;letter-spacing:2.5px;color:rgba(247,245,242,.3);text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:12px;">
+          🌞 Lunch
+          <span style="flex:1;height:1px;background:rgba(199,154,59,.1);"></span>
+        </div>
+        <div class="time-slots-grid" id="slots-lunch"></div>
+
+        <div style="font-size:10px;letter-spacing:2.5px;color:rgba(247,245,242,.3);text-transform:uppercase;margin:20px 0 10px;display:flex;align-items:center;gap:12px;">
+          🌆 Early Evening
+          <span style="flex:1;height:1px;background:rgba(199,154,59,.1);"></span>
+        </div>
+        <div class="time-slots-grid" id="slots-evening"></div>
+
+        <div style="font-size:10px;letter-spacing:2.5px;color:rgba(247,245,242,.3);text-transform:uppercase;margin:20px 0 10px;display:flex;align-items:center;gap:12px;">
+          🌙 Dinner
+          <span style="flex:1;height:1px;background:rgba(199,154,59,.1);"></span>
+        </div>
+        <div class="time-slots-grid" id="slots-dinner"></div>
+
+        <div id="time-error" class="field-error" style="margin-top:10px;"></div>
+      </div>
+
+      <div class="step-nav">
+        <button class="btn-prev" data-step="2">← Back</button>
+        <button class="btn-next" data-step="2">Your Details →</button>
+      </div>
+    </div>
+
+    <!-- ═══════════ STEP 3: DETAILS ═══════════ -->
+    <div class="step-panel" id="step-3">
+      <div class="sec-label left" style="margin-bottom:12px;"><span>Step 3 of 4</span></div>
+      <h2 class="step-heading">Tell Us <em>About You</em></h2>
+      <p class="step-subheading">Help us personalise your experience. All fields marked * are required.</p>
+
+      <!-- GUEST COUNTER -->
+      <div class="guest-counter-wrap">
+        <div style="font-size:10px;letter-spacing:3px;color:var(--gld);text-transform:uppercase;margin-bottom:14px;">Number of Guests</div>
+        <div class="guest-counter">
+          <button class="guest-btn" id="guest-minus" aria-label="Decrease guests">−</button>
+          <div class="guest-count-display" id="guest-count-display">2</div>
+          <button class="guest-btn" id="guest-plus" aria-label="Increase guests">+</button>
+        </div>
+        <div class="guest-note" id="guest-note">Perfect for a cosy experience.</div>
+      </div>
+
+      <!-- OCCASION -->
+      <div style="margin-bottom:32px;">
+        <div style="font-size:10px;letter-spacing:3px;color:var(--gld);text-transform:uppercase;margin-bottom:14px;">Occasion <span style="color:rgba(247,245,242,.25);letter-spacing:1px;text-transform:none;font-size:11px;">(optional)</span></div>
+        <div class="occasion-grid" id="occasion-grid">
+          <!-- Built by JS -->
+        </div>
+      </div>
+
+      <!-- CONTACT DETAILS -->
+      <div class="contact-fields">
+        <div style="font-size:10px;letter-spacing:3px;color:var(--gld);text-transform:uppercase;margin-bottom:20px;">Contact Details</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+          <div class="field-group">
+            <label class="field-label" for="res-name">Full Name *</label>
+            <input class="form-input" type="text" id="res-name" placeholder="Your full name" autocomplete="name">
+            <div class="field-error" id="name-error">Please enter your name.</div>
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="res-phone">Phone Number *</label>
+            <input class="form-input" type="tel" id="res-phone" placeholder="+91 XXXXX XXXXX" autocomplete="tel">
+            <div class="field-error" id="phone-error">Please enter a valid phone number.</div>
+          </div>
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="res-notes">Special Requests <span style="color:rgba(247,245,242,.25);letter-spacing:1px;text-transform:none;font-size:10px;">(optional)</span></label>
+          <textarea class="form-input" id="res-notes" rows="4" placeholder="Dietary restrictions, allergies, high chair needed, birthday cake arrangement, seating preference…" style="resize:none;"></textarea>
+        </div>
+      </div>
+
+      <!-- SPECIAL NOTES -->
+      <div style="background:rgba(199,154,59,.04);border-left:2px solid rgba(199,154,59,.3);padding:16px 20px;font-size:12px;color:rgba(247,245,242,.4);line-height:1.8;margin-bottom:8px;">
+        💡 <strong style="color:rgba(247,245,242,.6);">Good to know:</strong> We'll send a confirmation via WhatsApp within 30 minutes. For same-day reservations, please call us directly.
+      </div>
+
+      <div class="step-nav">
+        <button class="btn-prev" data-step="3">← Back</button>
+        <button class="btn-next" data-step="3">Review Booking →</button>
+      </div>
+    </div>
+
+    <!-- ═══════════ STEP 4: CONFIRM ═══════════ -->
+    <div class="step-panel" id="step-4">
+      <div class="sec-label left" style="margin-bottom:12px;"><span>Step 4 of 4</span></div>
+      <h2 class="step-heading">Review &amp; <em>Confirm</em></h2>
+      <p class="step-subheading">Please review your booking details below before confirming. You can go back to edit any step.</p>
+
+      <div class="confirm-summary">
+        <div class="confirm-title">📋 Booking Summary</div>
+        <div id="confirm-rows"><!-- Built by JS --></div>
+      </div>
+
+      <div class="confirm-policy">
+        <strong style="color:rgba(247,245,242,.6);">Reservation Policy:</strong> Tables are held for 15 minutes past the reserved time. Cancellations can be made up to 2 hours before the reservation. For parties of 8+, please call us directly. We'll confirm your booking via WhatsApp within 30 minutes.
+      </div>
+
+      <!-- EDIT SHORTCUTS -->
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px;">
+        <button onclick="goToStep(1)" style="background:transparent;border:1px solid rgba(199,154,59,.18);color:rgba(247,245,242,.4);padding:8px 16px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .3s;"
+          onmouseover="this.style.borderColor='rgba(199,154,59,.5)';this.style.color='var(--gld)'"
+          onmouseout="this.style.borderColor='rgba(199,154,59,.18)';this.style.color='rgba(247,245,242,.4)'">✏ Edit Branch</button>
+        <button onclick="goToStep(2)" style="background:transparent;border:1px solid rgba(199,154,59,.18);color:rgba(247,245,242,.4);padding:8px 16px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .3s;"
+          onmouseover="this.style.borderColor='rgba(199,154,59,.5)';this.style.color='var(--gld)'"
+          onmouseout="this.style.borderColor='rgba(199,154,59,.18)';this.style.color='rgba(247,245,242,.4)'">✏ Edit Date &amp; Time</button>
+        <button onclick="goToStep(3)" style="background:transparent;border:1px solid rgba(199,154,59,.18);color:rgba(247,245,242,.4);padding:8px 16px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .3s;"
+          onmouseover="this.style.borderColor='rgba(199,154,59,.5)';this.style.color='var(--gld)'"
+          onmouseout="this.style.borderColor='rgba(199,154,59,.18)';this.style.color='rgba(247,245,242,.4)'">✏ Edit Details</button>
+      </div>
+
+      <div class="step-nav">
+        <button class="btn-prev" data-step="4">← Back</button>
+        <button class="btn-next btn-fill" id="confirm-submit" style="padding:16px 52px;font-size:13px;letter-spacing:3px;">
+          ✓ Confirm Reservation
+        </button>
+      </div>
+    </div>
+
+    <!-- ═══════════ SUCCESS SCREEN ═══════════ -->
+    <div class="success-screen" id="success-screen">
+      <div class="success-checkmark">✓</div>
+      <h2 class="success-title">Request Recived <em style="color:var(--gld);font-style:italic;">will contact you soon!</em></h2>
+      <div class="success-ref" id="booking-ref">AYR-XXXXXX</div>
+      <p class="success-msg">
+        Your table has been reserved at <span id="success-summary" style="color:var(--ofw);"></span>.
+      </p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <button id="whatsapp-cta" style="display:flex;align-items:center;gap:10px;padding:14px 28px;background:#25D366;border:none;color:#fff;font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;cursor:pointer;font-family:'Outfit',sans-serif;transition:opacity .3s;"
+          onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Chat on WhatsApp
+        </button>
+        <a href="menu.html" class="btn-gold" style="padding:14px 28px;">Explore Menu</a>
+        <a href="index.html" class="btn-gold" style="padding:14px 28px;">Back to Home</a>
+      </div>
+    </div>
+
+  </div><!-- /reservation-main -->
+
+  <!-- ── SIDEBAR SUMMARY ── -->
+  <aside class="reservation-sidebar">
+    <div class="sidebar-title">Your Reservation</div>
+
+    <div class="summary-item empty" id="sum-branch">
+      <span class="summary-item-icon">📍</span>
+      <div><div class="summary-item-label">Branch</div><div class="summary-item-val empty-val">Not selected yet</div></div>
+    </div>
+    <div class="summary-item empty" id="sum-date">
+      <span class="summary-item-icon">📅</span>
+      <div><div class="summary-item-label">Date</div><div class="summary-item-val empty-val">Not selected yet</div></div>
+    </div>
+    <div class="summary-item empty" id="sum-time">
+      <span class="summary-item-icon">⏱</span>
+      <div><div class="summary-item-label">Time</div><div class="summary-item-val empty-val">Not selected yet</div></div>
+    </div>
+    <div class="summary-item" id="sum-guests">
+      <span class="summary-item-icon">👥</span>
+      <div><div class="summary-item-label">Guests</div><div class="summary-item-val">2 Guests</div></div>
+    </div>
+    <div class="summary-item empty" id="sum-occasion">
+      <span class="summary-item-icon">✨</span>
+      <div><div class="summary-item-label">Occasion</div><div class="summary-item-val empty-val">Not selected yet</div></div>
+    </div>
+    <div class="summary-item empty" id="sum-name">
+      <span class="summary-item-icon">👤</span>
+      <div><div class="summary-item-label">Name</div><div class="summary-item-val empty-val">Not entered yet</div></div>
+    </div>
+
+    <div class="sidebar-cta">
+      <p>Need help with your reservation? Call us directly.</p>
+      <a href="tel:+91 73311 44804" style="display:block;margin-top:12px;color:var(--gld);font-size:14px;font-weight:500;letter-spacing:.5px;text-decoration:none;transition:opacity .3s;"
+        onmouseover="this.style.opacity='.7'" onmouseout="this.style.opacity='1'">
+        📞 +91 73311 44804
+      </a>
+    </div>
+
+    <div style="margin-top:20px;padding:16px;background:rgba(37,211,102,.05);border:1px solid rgba(37,211,102,.2);text-align:center;">
+  
+      <a href="https://wa.me/916303231642"
+         target="_blank"
+         style="background:transparent;border:none;color:#25D366;font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;font-family:'Outfit',sans-serif;display:flex;align-items:center;gap:8px;width:100%;justify-content:center;"
+         onmouseover="this.style.opacity='.8'"
+         onmouseout="this.style.opacity='1'">
+    
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
+        </svg>
+    
+        Book via WhatsApp
+    
+      </a>
+    
+    </div>
+
+</div><!-- /reservation-wrapper -->
+
+<!-- ═══ FAQ SECTION ═══ -->
+<section class="faq-section">
+  <div class="reveal" style="text-align:center;margin-bottom:52px;">
+    <div class="sec-label"><span>Help</span></div>
+    <h2 class="sec-title center">Reservation <em>FAQ</em></h2>
+  </div>
+  <div style="max-width:760px;margin:0 auto;">
+
+    <div class="faq-item">
+      <button class="faq-question">
+        How far in advance should I book?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        We recommend booking at least 5 hours in advance for weekday dinners, and 12 hours for weekends and public holidays. For special occasions, private dining rooms, or large groups (8+ guests), please book at least 3–4 days in advance. Same-day reservations are accepted subject to availability — call us directly for the best chance.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Can I modify or cancel my reservation?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        Yes. You can modify or cancel your reservation up to 2 hours before the scheduled time by calling us or sending a WhatsApp message. We understand plans change — we just ask for reasonable notice so we can accommodate other guests. For same-day cancellations within 1 hour of the reservation, a courtesy call is appreciated.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Do you accommodate dietary restrictions?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        Absolutely. We accommodate vegetarian, vegan, jain, gluten-free, nut-free, and other dietary requirements. Please mention your needs in the "Special Requests" field when booking, and our kitchen team will prepare accordingly. For severe allergies, we recommend calling us directly so our staff can discuss your requirements personally.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        What are your private dining options?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        Our Vizag branch features a private dining room that accommodates up to 20 guests, ideal for birthday dinners, anniversaries, business meetings, and party celebrations. The MVP branch also has a banquet hall for up to 20 guests. For private dining enquiries, please call +91 73311 44804.
+      </div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        How long will my table be held?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer"><div class="faq-answer-inner">
+        We hold your reserved table for 15 minutes past the scheduled reservation time. If you are running late, please call us so we can hold the table longer. After 15 minutes without contact, we may need to release the table to walk-in guests, though we'll do our best to accommodate you when you arrive.
+      </div></div>
+    </div>
+
+    
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ PRIVATE DINING SECTION ═══ -->
+<!-- <section style="padding:80px 80px;background:var(--blk);border-top:1px solid rgba(199,154,59,.1);">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;" class="reveal">
+    <div>
+      <div class="sec-label left" style="margin-bottom:12px;"><span>Private Dining</span></div>
+      <h2 class="sec-title" style="margin-bottom:20px;">Exclusive Private<br><em>Dining Rooms</em></h2>
+      <p style="font-size:15px;color:rgba(247,245,242,.55);line-height:1.9;font-weight:300;margin-bottom:20px;">
+        Celebrate your most precious moments in our beautifully appointed private dining spaces. Available at our Visakhapatnam main branch, our private rooms combine intimate ambiance with the full Aha Yemi Ruchulu menu experience.
+      </p>
+      <p style="font-size:15px;color:rgba(247,245,242,.55);line-height:1.9;font-weight:300;margin-bottom:36px;">
+        Whether it's a milestone birthday, a marriage proposal, a business dinner, or an anniversary surprise — our team crafts every detail to perfection.
+      </p>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;">
+        <a href="catering.html" class="btn-fill">Enquire Now</a>
+        <a href="tel:+918912345678" class="btn-gold">📞 Call Us</a>
+      </div>
+    </div>
+    <div style="position:relative;height:420px;overflow:hidden;border:1px solid rgba(199,154,59,.18);">
+      <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80" alt="Private Dining" style="width:100%;height:100%;object-fit:cover;transition:transform 12s ease;">
+      <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent,rgba(11,11,11,.35));"></div>
+      <div style="position:absolute;bottom:24px;left:24px;right:24px;display:flex;flex-wrap:wrap;gap:8px;">
+        <span style="background:rgba(11,11,11,.85);backdrop-filter:blur(8px);border:1px solid rgba(199,154,59,.3);padding:6px 14px;font-size:11px;color:var(--gld);letter-spacing:1px;">Up to 20 Guests</span>
+        <span style="background:rgba(11,11,11,.85);backdrop-filter:blur(8px);border:1px solid rgba(199,154,59,.3);padding:6px 14px;font-size:11px;color:var(--gld);letter-spacing:1px;">Full Menu Access</span>
+        <span style="background:rgba(11,11,11,.85);backdrop-filter:blur(8px);border:1px solid rgba(199,154,59,.3);padding:6px 14px;font-size:11px;color:var(--gld);letter-spacing:1px;">Dedicated Staff</span>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-logo"><div class="">
+        <span><img src="assets/Aha-Logo.png" style="width: 80px; height: 90px;"></span>
+      </div><h3>Aha Yemi Ruchulu</h3></div>
+      <p>Celebrating the rich multi cuisine dishes — in MVP, Gajuwaka and Anakapalli.</p>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/aha_yemi_ruchulu/" class="soc soc-ig" title="Instagram">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/share/1ChVwjzYAh/?mibextid=wwXIfr" class="soc soc-fb" title="Facebook">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        
+      </div>
+    </div>
+    <div class="footer-col"><h4>Explore</h4><ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="story.html">Our Story</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="catering.html">Catering</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="franchise.html">franchise</a></li>
+      <li><a href="branches.html">Branches</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Branches</h4><ul>
+      <li><a href="https://maps.app.goo.gl/ovn1dA99WKLaHt5z6"  target="_blank">MVP</a></li>
+      <li><a href="https://maps.app.goo.gl/y9RdgmKpkf8jzEqk9"  target="_blank">Gajuwaka</a></li>
+      <li><a href="https://maps.app.goo.gl/Mw4kasLbXvY4PgF19"  target="_blank">Anakapalli</a></li>
+    </ul></div>
+    <div class="footer-col"><h4>Order Online</h4><ul>
+      <li><a href="https://www.zomato.com/visakhapatnam/aha-yemi-ruchulu-mvp-colony-vizag" style="color:rgba(226,55,68,.75);" target="_blank">🍽 Order on Zomato</a></li>
+      <li><a href="https://www.swiggy.com/city/vizag/aha-yemi-ruchulu-sector-10-mvp-colony-rest795823" style="color:rgba(252,128,25,.75);" target="_blank">⊙ Order on Swiggy</a></li>
+      <li style="margin-top:10px;"><a href="catering.html">Catering Enquiry</a></li>
+      <li><a href="tel:+918912345678">+91 73311 44804</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2023 Aha Yemi Ruchulu. All rights reserved.</p><span></span></div>
+</footer>
+
+<style>
+.soc-ig:hover{border-color:#E1306C!important;color:#E1306C!important;}
+.soc-fb:hover{border-color:#1877F2!important;color:#1877F2!important;}
+.soc-yt:hover{border-color:#FF0000!important;color:#FF0000!important;}
+.soc-zomato{border-color:rgba(226,55,68,.28)!important;color:rgba(226,55,68,.7)!important;}
+.soc-zomato:hover{border-color:#E23744!important;color:#E23744!important;}
+.soc-swiggy{border-color:rgba(252,128,25,.28)!important;color:rgba(252,128,25,.7)!important;}
+.soc-swiggy:hover{border-color:#FC8019!important;color:#FC8019!important;}
+.footer-col a{color:rgba(247,245,242,.4);transition:color .3s;text-decoration:none;}
+.footer-col a:hover{color:var(--gld);}
+@media(max-width:768px){
+  section[style*="grid-template-columns:1fr 1fr"]{display:block!important;}
+  section[style*="grid-template-columns:1fr 1fr"] > div:last-child{margin-top:40px;}
+  .faq-section{padding:60px 20px 80px;}
+  section[style*="padding:80px 80px"]{padding:60px 20px!important;}
+}
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const track = document.getElementById("supportTrack");
+    const prevBtn = document.getElementById("supportPrevBtn");
+    const nextBtn = document.getElementById("supportNextBtn");
+    const fill = document.getElementById("supportProgress");
+  
+    if (!track || !prevBtn || !nextBtn || !fill) return;
+  
+    // The distance to jump on each click (1 Card Width + 1 Gap space)
+    const scrollAmount = 344; 
+  
+    // Click Event Listeners
+    nextBtn.addEventListener("click", () => {
+      track.scrollBy({
+        left: scrollAmount,
+        behavior: "smooth"
+      });
+    });
+  
+    prevBtn.addEventListener("click", () => {
+      track.scrollBy({
+        left: -scrollAmount,
+        behavior: "smooth"
+      });
+    });
+  
+    // Dynamic Progress Bar updates
+    const updateProgress = () => {
+      const maxScroll = track.scrollWidth - track.clientWidth;
+      if (maxScroll <= 0) {
+        fill.style.width = "0%";
+        return;
+      }
+      const percentage = (track.scrollLeft / maxScroll) * 100;
+      fill.style.width = `${percentage}%`;
+    };
+  
+    track.addEventListener("scroll", updateProgress);
+    window.addEventListener("resize", updateProgress);
+    updateProgress();
+  });
+
+  (function () {
+    var ham = document.getElementById('hamburger');
+    var mob = document.getElementById('mobile-menu');
+    var cls = document.getElementById('mobile-close');
+
+    if (!ham || !mob) return;
+
+    // Remove any old listeners by cloning
+    var newHam = ham.cloneNode(true);
+    ham.parentNode.replaceChild(newHam, ham);
+
+    newHam.addEventListener('click', function () {
+      mob.classList.add('open');
+    });
+
+    if (cls) {
+      cls.addEventListener('click', function () {
+        mob.classList.remove('open');
+      });
+    }
+
+    // Close when any link inside is clicked
+    mob.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        mob.classList.remove('open');
+      });
+    });
+
+    // Close on outside click
+    document.addEventListener('click', function (e) {
+      if (mob.classList.contains('open') &&
+          !mob.contains(e.target) &&
+          !newHam.contains(e.target)) {
+        mob.classList.remove('open');
+      }
+    });
+  })();
+  </script>
+
+
+
+<button id="scroll-top-btn" aria-label="Scroll to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+
+
+<script src="js/main.js"></script>
+<script src="js/reserve.js"></script>
+<script src="js/site-api.js"></script>
+<script src="rreserveapi.js"></script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+
+
+
+/* Unique Namespace Wrapper to avoid global conflicts */
+.rfh-hero-wrapper {
+    --rfh-primary-color: #ff3e24;
+    --rfh-text-dark: #111111;
+    --rfh-font-sans: 'Inter', sans-serif;
+    
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #e5edf1;
+    font-family: var(--rfh-font-sans);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+  
+  .rfh-hero-wrapper *, 
+  .rfh-hero-wrapper *::before, 
+  .rfh-hero-wrapper *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Clouds background imagery mimicking the video */
+  .rfh-bg-clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1534088568595-a066f410bcda?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+    opacity: 0.85;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  /* Typography Container Layer */
+  .rfh-text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+    user-select: none;
+    pointer-events: none;
+  }
+  
+  .rfh-giant-title {
+    font-size: 16vw;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    color: var(--rfh-primary-color);
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    gap: 0.1vw;
+  }
+  
+  /* Individual letter styling for target dynamic filters */
+  .rfh-giant-title span {
+    display: inline-block;
+    transition: filter 0.2s cubic-bezier(0.1, 0.8, 0.3, 1), transform 0.2s ease-out;
+    will-change: filter, transform;
+  }
+  
+  /* Foreground content grid layout */
+  .rfh-foreground-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+  }
+  
+  .rfh-header {
+    align-self: center;
+  }
+  
+  .rfh-logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--rfh-text-dark);
+    letter-spacing: -0.03em;
+  }
+  
+  /* Food Center Floating Element */
+  .rfh-food-showcase {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 28vw;
+    max-width: 450px;
+    min-width: 280px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+  }
+  
+  .rfh-food-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 35px rgba(0,0,0,0.25));
+    animation: rfhFloatAnimation 6s ease-in-out infinite;
+    transition: transform 0.3s ease-out;
+  }
+  
+  /* CSS Floating Keyframe */
+  @keyframes rfhFloatAnimation {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(2deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+  }
+  
+  /* Hover effect on the food item */
+  .rfh-food-showcase:hover .rfh-food-image {
+    transform: scale(1.06) rotate(-1deg);
+    cursor: grab;
+  }
+  
+  /* Bottom elements alignment */
+  .rfh-bottom-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .rfh-subtext {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: var(--rfh-text-dark);
+    line-height: 1.6;
+    opacity: 0.8;
+  }
+  
+  .rfh-cta-btn {
+    display: inline-block;
+    padding: 14px 44px;
+    background-color: transparent;
+    color: var(--rfh-text-dark);
+    border: 1.5px solid var(--rfh-text-dark);
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+  }
+  
+  .rfh-cta-btn:hover {
+    background-color: var(--rfh-text-dark);
+    color: #ffffff;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .rfh-giant-title { font-size: 20vw; }
+    .rfh-food-showcase { width: 55vw; }
+    .rfh-foreground-content { padding: 24px; }
+  }
+  
+  
+  
