@@ -273,6 +273,20 @@
   .sub-branches-grid { grid-template-columns: 1fr; }
   .branches-overview-grid { grid-template-columns: 1fr 1fr; }
   .main-branch-info { padding: 32px 24px; }
+
+
+   .logo-img{
+  width:80px;
+  height:80px;
+  object-fit:contain;
+  display:block;
+}
+
+.nav-logo-icon{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
   .branch-actions { flex-direction: column; }
   .branch-actions .btn-fill,
   .branch-actions .btn-gold { text-align: center; }
