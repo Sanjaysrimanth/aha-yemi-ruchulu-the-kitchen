@@ -962,3 +962,17 @@ select.form-input option { background:#141414; color:var(--ofw); }
     height: 16px;
   }
 }
+
+.logo-img{
+  width:80px;
+  height:80px;
+  object-fit:contain;
+  display:block;
+}
+
+.nav-logo-icon{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:visible;
+}
