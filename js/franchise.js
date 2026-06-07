@@ -162,30 +162,123 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ════════════════════════════════════════
      SUPPORT — horizontal drag scroll
   ════════════════════════════════════════ */
-  function initSupportScroll() {
-    const track    = document.getElementById('supportTrack');
-    const inner    = document.getElementById('supportInner');
-    const progress = document.getElementById('supportProgress');
-    if (!track || !inner) return;
+  // function initSupportScroll() {
+  //   const track    = document.getElementById('supportTrack');
+  //   const inner    = document.getElementById('supportInner');
+  //   const progress = document.getElementById('supportProgress');
+  //   if (!track || !inner) return;
   
-    let isDown = false, startX = 0, scrollLeft = 0;
+  //   let isDown = false, startX = 0, scrollLeft = 0;
   
-    track.addEventListener('mousedown', e => {
-      isDown    = true;
-      startX    = e.pageX - track.offsetLeft;
-      scrollLeft= track.scrollLeft;
-      track.classList.add('dragging');
+  //   track.addEventListener('mousedown', e => {
+  //     isDown    = true;
+  //     startX    = e.pageX - track.offsetLeft;
+  //     scrollLeft= track.scrollLeft;
+  //     track.classList.add('dragging');
+  //   });
+  //   window.addEventListener('mouseup', () => { isDown = false; track.classList.remove('dragging'); });
+  //   track.addEventListener('mouseleave', () => { isDown = false; track.classList.remove('dragging'); });
+  //   track.addEventListener('mousemove', e => {
+  //     if (!isDown) return;
+  //     e.preventDefault();
+  //     const x    = e.pageX - track.offsetLeft;
+  //     const walk = (x - startX) * 1.4;
+  //     track.scrollLeft = scrollLeft - walk;
+  //     updateProgress();
+  //   });
+function initSupportScroll() {
+  const track    = document.getElementById('supportTrack');
+  const inner    = document.getElementById('supportInner');
+  const progress = document.getElementById('supportProgress');
+
+  const prevBtn = document.getElementById('supportPrevBtn');
+  const nextBtn = document.getElementById('supportNextBtn');
+
+  if (!track || !inner) return;
+
+  let isDown = false, startX = 0, scrollLeft = 0;
+
+  track.addEventListener('mousedown', e => {
+    isDown = true;
+    startX = e.pageX - track.offsetLeft;
+    scrollLeft = track.scrollLeft;
+    track.classList.add('dragging');
+  });
+
+  window.addEventListener('mouseup', () => {
+    isDown = false;
+    track.classList.remove('dragging');
+  });
+
+  track.addEventListener('mouseleave', () => {
+    isDown = false;
+    track.classList.remove('dragging');
+  });
+
+  track.addEventListener('mousemove', e => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - track.offsetLeft;
+    const walk = (x - startX) * 1.4;
+    track.scrollLeft = scrollLeft - walk;
+    updateProgress();
+  });
+
+  let touchX = 0;
+
+  track.addEventListener('touchstart', e => {
+    touchX = e.touches[0].pageX;
+  }, { passive: true });
+
+  track.addEventListener('touchmove', e => {
+    const dx = touchX - e.touches[0].pageX;
+    track.scrollLeft += dx * 1.2;
+    touchX = e.touches[0].pageX;
+    updateProgress();
+  }, { passive: true });
+
+  track.addEventListener('scroll', updateProgress, { passive: true });
+
+  function updateProgress() {
+    if (!progress) return;
+
+    const max = track.scrollWidth - track.clientWidth;
+    const pct = max > 0 ? (track.scrollLeft / max) * 100 : 0;
+    progress.style.width = pct + '%';
+  }
+
+  // LEFT / RIGHT BUTTONS
+  const getScrollAmount = () => {
+    const card = inner.querySelector('.support-card');
+    return card ? card.offsetWidth + 24 : 400;
+  };
+
+  nextBtn?.addEventListener('click', () => {
+    track.scrollBy({
+      left: getScrollAmount(),
+      behavior: 'smooth'
     });
-    window.addEventListener('mouseup', () => { isDown = false; track.classList.remove('dragging'); });
-    track.addEventListener('mouseleave', () => { isDown = false; track.classList.remove('dragging'); });
-    track.addEventListener('mousemove', e => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x    = e.pageX - track.offsetLeft;
-      const walk = (x - startX) * 1.4;
-      track.scrollLeft = scrollLeft - walk;
-      updateProgress();
+  });
+
+  prevBtn?.addEventListener('click', () => {
+    track.scrollBy({
+      left: -getScrollAmount(),
+      behavior: 'smooth'
     });
+  });
+
+  // Auto-scroll hint
+  setTimeout(() => {
+    if (track.scrollLeft === 0) {
+      track.scrollTo({ left: 60, behavior: 'smooth' });
+      setTimeout(() => {
+        track.scrollTo({ left: 0, behavior: 'smooth' });
+      }, 900);
+    }
+  }, 1200);
+
+  updateProgress();
+}
   
     // Touch support
     let touchX = 0;
