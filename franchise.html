@@ -774,34 +774,6 @@
 
 
 
-const name = document.getElementById('f-name').value.trim();
-const email = document.getElementById('f-email').value.trim();
-const phone = document.getElementById('f-phone').value.trim();
-const city = document.getElementById('f-city').value.trim();
-
-if (name.length < 3) {
-  alert('Please enter your full name');
-  return;
-}
-
-if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-  alert('Please enter a valid email');
-  return;
-}
-
-if (!/^[0-9+\-\s()]{10,20}$/.test(phone)) {
-  alert('Please enter a valid phone number');
-  return;
-}
-
-if (city.length < 2) {
-  alert('Please enter your city/location');
-  return;
-}
-
-
-
-
 
 
 
