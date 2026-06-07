@@ -976,3 +976,7 @@ select.form-input option { background:#141414; color:var(--ofw); }
   justify-content:center;
   overflow:visible;
 }
+
+html {
+  zoom: 1.1;
+}
