@@ -281,32 +281,7 @@ function initSupportScroll() {
 }
   
     // Touch support
-    let touchX = 0;
-    track.addEventListener('touchstart', e => { touchX = e.touches[0].pageX; }, { passive: true });
-    track.addEventListener('touchmove',  e => {
-      const dx = touchX - e.touches[0].pageX;
-      track.scrollLeft += dx * 1.2;
-      touchX = e.touches[0].pageX;
-      updateProgress();
-    }, { passive: true });
-  
-    track.addEventListener('scroll', updateProgress, { passive: true });
-  
-    function updateProgress() {
-      if (!progress || !inner) return;
-      const max = track.scrollWidth - track.clientWidth;
-      const pct = max > 0 ? (track.scrollLeft / max) * 100 : 0;
-      progress.style.width = pct + '%';
-    }
-  
-    // Auto-scroll hint on load
-    setTimeout(() => {
-      if (track.scrollLeft === 0) {
-        track.scrollTo({ left: 60, behavior: 'smooth' });
-        setTimeout(() => track.scrollTo({ left: 0, behavior: 'smooth' }), 900);
-      }
-    }, 1200);
-  }
+
   
   /* ════════════════════════════════════════
      TIMELINE SPINE — draws line as you scroll
